@@ -67,7 +67,7 @@ describe('MaxHeap', () => {
 				new Node(4, 4),
 				new Node(5, 5),
 				new Node(6, 6),
-			];
+            ];
 
 			nodes.forEach(node => {
 				h.insertNode(node);

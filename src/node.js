@@ -8,8 +8,10 @@ class Node {
 	}
 
 	appendChild(node) {
-					
-
+		this.left = node;
+		if (this.left) {
+			this.right = node;
+		};
 	}
 
 	removeChild(node) {

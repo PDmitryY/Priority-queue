@@ -32,7 +32,7 @@ describe('Node', () => {
 			expect(parent.right).to.equal(null);
 		});
 
-		it('assigns passed child to this.right if this.left exists', () => {
+		it.only('assigns passed child to this.right if this.left exists', () => {
 			parent.appendChild(leftChild);
 			parent.appendChild(rightChild);
 
