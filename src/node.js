@@ -17,10 +17,15 @@ class Node {
 	}
 
 	removeChild(node) {
-        this.left = null;
-        if(this.right) {
-        	this.right = null;
+        if(node == this.left) {
+					this.left = null;
+				}
+        else if(node == this.right) {
+	      	this.right = null;
         }
+				else {
+					throw new Error('you are trying to remove node which does not exist');
+				}
 	}
 
 	remove() {
@@ -28,7 +33,7 @@ class Node {
 	}
 
 	swapWithParent() {
-		
+
 	}
 }
 
