@@ -17,13 +17,13 @@ describe('Node', () => {
 	});
 
 	describe('#appendChild', () => {
-		let parent, leftChild, rightChild;
+		let parent, leftChild, rightChild; 
 
 		beforeEach(() => {
 			parent = new Node(42, 15);
 			leftChild = new Node(13, 20);
 			rightChild = new Node(98, 69);
-		});
+		}); 
 
 		it('assigns passed child to this.left', () => {
 			parent.appendChild(leftChild);
@@ -32,10 +32,10 @@ describe('Node', () => {
 			expect(parent.right).to.equal(null);
 		});
 
-		it.only('assigns passed child to this.right if this.left exists', () => {
+		it('assigns passed child to this.right if this.left exists', () => {
 			parent.appendChild(leftChild);
 			parent.appendChild(rightChild);
-
+  
 			expect(parent.left).to.equal(leftChild);
 			expect(parent.right).to.equal(rightChild);
 		});
@@ -58,16 +58,16 @@ describe('Node', () => {
 			leftChild = new Node(13, 20);
 			rightChild = new Node(98, 69);
 
-			parent.appendChild(leftChild);
+			parent.appendChild(leftChild); 
 			parent.appendChild(rightChild);
-		});
+		}); 
 
 		it('assing null to this.left if passed node is left child', () => {
 			parent.removeChild(leftChild);
 			expect(parent.left).to.equal(null);
 		});
 
-		it('assing null to this.right if passed node is right child', () => {
+		it.only('assing null to this.right if passed node is right child', () => {
 			parent.removeChild(rightChild);
 			expect(parent.right).to.equal(null);
 		});
