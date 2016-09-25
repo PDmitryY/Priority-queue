@@ -89,7 +89,7 @@ describe('Node', () => {
 		})
 	});
 
-	describe.only('#remove', () => {
+	describe('#remove', () => {
 		it('does nothing if node does not have parent', () => {
 			const node = new Node(42, 15);
 
@@ -151,9 +151,7 @@ describe('Node', () => {
 
 			root.appendChild(left);
 			root.appendChild(right);
-
 			right.swapWithParent();
-
 			expect(left.parent).to.equal(right);
 		})
 
