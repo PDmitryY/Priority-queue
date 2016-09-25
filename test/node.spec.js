@@ -89,7 +89,7 @@ describe('Node', () => {
 		})
 	});
 
-	describe('#remove', () => {
+	describe.only('#remove', () => {
 		it('does nothing if node does not have parent', () => {
 			const node = new Node(42, 15);
 
